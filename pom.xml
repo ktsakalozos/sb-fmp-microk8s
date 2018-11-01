@@ -27,6 +27,7 @@
         <!-- This is the default port of the container registry that comes with microk8s -->
         <docker.registry>localhost:32000</docker.registry>
         <java.version>1.8</java.version>
+        <spring-cloud-kubernetes.version>0.3.0.RELEASE</spring-cloud-kubernetes.version>
     </properties>
 
     <build>
@@ -90,6 +91,19 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-kubernetes-config</artifactId>
+            <version>${spring-cloud-kubernetes.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-actuator-autoconfigure</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
